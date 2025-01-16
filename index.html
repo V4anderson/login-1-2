@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+       body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: rgb(63, 62, 62);
+        }
+
+        .container{
+            display: flex;
+            width: 800px;
+            justify-content: center;
+            align-items: center;
+        }
+        .group-form-fundo{
+            padding: 5px;
+            clip-path: polygon(0 80%, 20% 100%, 100% 100%, 100% 20%, 80% 0, 0 0);
+            background-color: #e9f035;
+        }
+        .group-form{
+            clip-path: polygon(0 80%, 20% 100%, 100% 100%, 100% 20%, 80% 0, 0 0);
+            background-color: rgb(43, 43, 43);
+            color: rgb(230, 230, 230);
+            box-shadow: rgb(59, 59, 59) 0px 0px 20px 1px ;
+        }
+        .logo{
+            padding-top: 10px;
+            text-align: start;
+            margin-left: 24px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            width: 300px;
+            justify-content: center;
+            padding: 25px;
+            gap: 1px;
+        }
+        .group-button{
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        button{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e9f035;
+            width: 80px;
+            border-color: #e9f035;
+            border-radius: 1px;
+            border-style: solid;
+        }
+        .footer{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            color: #e9f035;
+        }
+        .footer a{
+            text-decoration: none;
+            color: rgb(230, 230, 230);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="group-form-fundo">
+            <div class="group-form">
+            <div class="logo"><h3>Login</h3></div>
+            <form action="post" id="formTest">
+                <label for="">Nome de usuário(e-mail)</label>
+                <input type="email" name="" id="" required>
+                <label for="">Senha</label>
+                <input type="password" name="" id="" required minlength="6">
+                <div class="group-button">
+                    <button type="submit">Entrar</button>
+                </div>
+                <div class="footer">
+                    <b>Desenvolvido por:<a href="https://www.linkedin.com/in/v4anderson-andrade/">V4anderson</a> <br></b>
+                </div>
+            </form>
+        </div>
+        </div>
+        
+    </div>
+    <script>
+        let formTest = document.getElementById('formTest')
+            formTest.addEventListener('submit',(event)=>{
+                event.preventDefault()
+                alert('Login realizado com sucesso!')
+            })
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
